@@ -17,5 +17,3 @@ Repository ini berfungsi sebagai panduan lengkap bagi pengembang front end, menc
 ## Memanfaatkan Alat Pengembangan
 
 Alat pengembangan seperti praprosesor CSS, kerangka kerja CSS, dan kerangka kerja JavaScript memainkan peran penting dalam meningkatkan alur kerja dan produktivitas pengembangan front end. Memahami cara memanfaatkan alat-alat ini secara efektif adalah kunci untuk membangun antarmuka web yang kokoh dan menarik secara visual.
-
-Jelajahi repository ini untuk sumber daya dan wawasan mendalam tentang praktik pengembangan front end. Selamat mengoding! 🚀
