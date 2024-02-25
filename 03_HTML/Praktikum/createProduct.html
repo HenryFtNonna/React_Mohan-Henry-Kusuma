@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Product</title>
+</head>
+<body>
+  <h1>Create Product</h1>
+  <h2>Detail Product</h2>
+  <form action="#">
+    <label for="product_name">Product Name:</label><br>
+    <input type="text" id="product_name" name="product_name" required>
+    <br>
+    <br>
+    <label for="product_category">Product Category:</label><br>
+    <select id="product_category" name="product_category" required>
+      <option value="">Select a category</option>
+      <option value="food">Food</option>
+      <option value="electronics">Electronics</option>
+      <option value="clothing">Clothing</option>
+    </select>
+    <br>
+    <br>
+    <label for="product_freshness">Product Freshness:</label><br>
+    <input type="radio" id="product_freshness_new" name="product_freshness" value="new" checked>
+    <label for="product_freshness_new">New</label>
+    <br>
+    <input type="radio" id="product_freshness_second_hand" name="product_freshness" value="second_hand">
+    <label for="product_freshness_second_hand">Second Hand</label>
+    <br>
+    <input type="radio" id="product_freshness_refubished" name="product_freshness" value="Refubished">
+    <label for="product_freshness_refubished">Refubished</label>
+    <br><br>
+    <label for="product-image">Image of Product:</label><br> 
+    <input type="file" id="product-image" name="product-image"><br><br>
+
+    <label for="product-description">Additional Description:</label><br>
+    <textarea id="product-description" name="product-description"></textarea><br><br>
+    
+    <label for="product-price">Product price:</label><br> 
+    <input type="number" id="product-price" name="product-price" min="1" value="100"><br><br>
+       
+    <button type="submit">Submit</button>
+  </form>
+</body>
+</html>
