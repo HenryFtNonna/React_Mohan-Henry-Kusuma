@@ -1,0 +1,24 @@
+.header {
+    padding: 100px;
+    text-align: center;
+    background: #1D38D1;
+    color: white;
+    font-size: 30px;
+}
+.gambar{
+    float: left;
+    margin-right: 20px;
+    padding: 10px;
+}
+.gambar img {
+    height: 100%;;
+    margin-bottom: -5px;
+}
+.button{
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
