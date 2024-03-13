@@ -1,0 +1,117 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Document</title>  
+
+    <style> 
+        .error { 
+          border: 1px solid red; 
+        } 
+        .success { 
+          border: 1px solid green; 
+        } 
+        /* Tambahkan CSS untuk tabel */ 
+        table { 
+          border-collapse: collapse; /* Menggabungkan border */ 
+          width: 100%; /* Menentukan lebar tabel */ 
+        } 
+        th, 
+        td { 
+          border: 1px solid #ddd; /* Menambahkan border pada setiap sel */ 
+          padding: 8px; /* Menambahkan padding di dalam sel */ 
+        } 
+        th { 
+          background-color: #f2f2f2; 
+          text-align: left; 
+        } 
+      </style>
+</head>  
+<body>  
+    <section>  
+        <h1>Document</h1>  
+        <h2 id="jsdom">JS DOM</h2>  
+        <form action="" id="myForm">  
+            <label for="">Product Name </label>  
+            <input type="text" minlength="6" maxlength="25" id="productName" name="productName" required><br>  
+            <label for="" >Product Price</label>  
+            <input type="text" id="productPrice" name="productPrice" required><br><br><br>  
+            <button type="submit">create product</button>  
+    </section>  
+    <div id="productTableContainer"> 
+    </div> 
+  
+    <script>  
+        const form = document.getElementById("myForm");
+        const productNameEl = document.getElementById("productName");
+        const productPriceEl = document.getElementById("productPrice");
+        const productTableContainer = document.getElementById("productTableContainer");
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault(); // Prevent form submission
+            
+            if(validateForm()) {
+                createProductTabel(productNameEl.value, productPriceEl.value);
+            }
+        });
+        
+        function validateForm() { 
+            var productName = productNameEl.value; 
+            var productPrice = productPriceEl.value; 
+         
+            if (productName.length < 6 || productName.length > 25) { 
+                alert("Nama produk harus memiliki panjang antara 6 dan 25 karakter."); 
+                return false; 
+            } 
+ 
+            if (isNaN(productPrice) || productPrice === "") { 
+                alert("Harga produk harus berupa angka."); 
+                return false; 
+            } 
+ 
+            return true; 
+        } 
+
+        function createProductTabel(productName, productPrice) {
+            console.log("createProductTabel");
+
+            const table = document.createElement("table");
+            const thead = document.createElement("thead");
+            const tbody = document.createElement("tbody");
+            const headerRow = document.createElement("tr");
+            const nameHeader = document.createElement("th");
+            const priceHeader = document.createElement("th");
+            const productRow = document.createElement("tr");
+            const nameCell = document.createElement("td");
+            const priceCell = document.createElement("td");
+
+            nameHeader.textContent = "Product Name";
+            priceHeader.textContent = "Product Price";
+
+            headerRow.appendChild(nameHeader);
+            headerRow.appendChild(priceHeader);
+            thead.appendChild(headerRow);
+            table.appendChild(thead);
+
+            nameCell.textContent = productName;
+            priceCell.textContent = productPrice;
+            productRow.appendChild(nameCell);
+            productRow.appendChild(priceCell);
+            tbody.appendChild(productRow);
+            table.appendChild(tbody);
+
+            productTableContainer.appendChild(table);
+        }
+ 
+        document.getElementById('productPrice').addEventListener("input", function(){ 
+            var inputValue = this.value; 
+            if(inputValue.match(/[!@#\$%\^\&*\)\(+=._-]/g) || inputValue.match(/[a-zA-Z]/)) { 
+                alert("Harga harus berupa angka."); 
+                this.value = inputValue.replace(/[!@#\$%\^\&*\)\(+=._-]/g, ''); 
+            } 
+        }) 
+ 
+    </script>  
+</body>  
+</html>
