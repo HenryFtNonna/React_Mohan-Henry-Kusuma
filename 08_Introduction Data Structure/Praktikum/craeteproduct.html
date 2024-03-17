@@ -1,0 +1,111 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Document</title>  
+
+    <style> 
+        .error { 
+          border: 1px solid red; 
+        } 
+        .success { 
+          border: 1px solid green; 
+        } 
+        
+        table { 
+          border-collapse: collapse;
+          width: 100%; 
+        } 
+        th, 
+        td { 
+          border: 1px solid #ddd; 
+          padding: 8px; 
+        } 
+        th { 
+          background-color: #f2f2f2; 
+          text-align: left; 
+        } 
+
+        #productTableContainer table {
+            display: none;
+        }
+    </style>
+</head>  
+<body>  
+    <section>  
+        <h1>Document</h1>  
+        <h2 id="jsdom">JS DOM</h2>  
+        <form action="" id="myForm">  
+            <label for="">Product Name </label>  
+            <input type="text" minlength="6" maxlength="25" id="productName" name="productName" required><br>  
+            <label for="" >Product Price</label>  
+            <input type="text" id="productPrice" name="productPrice" required><br><br><br>  
+            <button type="submit" id="changeColorBtn">create product</button>
+        </form>
+        
+        <div id="productTableContainer">
+            <table id="productTable">
+                <thead>
+                    <tr>
+                        <th>Product Name</th>
+                        <th>Product Price</th>
+                    </tr>
+                </thead>
+                <tbody id="productTableBody">
+                    
+                </tbody>
+            </table>
+        </div>
+    </section>  
+  
+    <script>
+        document.getElementById('myForm').addEventListener('submit', function(e) {
+            e.preventDefault(); 
+            
+            if(validateForm()) {
+               
+                var productName = document.getElementById("productName").value; 
+                var productPrice = document.getElementById("productPrice").value;
+
+                addProductRow(productName, productPrice);
+                
+                document.getElementById('jsdom').style.color = 'red';  
+                document.getElementById('productTable').style.display = 'table';
+            }
+        });
+
+        function addProductRow(productName, productPrice) {
+           
+            const productRow = document.createElement("tr");
+
+            const nameCell = document.createElement("td");
+            nameCell.textContent = productName;
+            productRow.appendChild(nameCell);
+
+            const priceCell = document.createElement("td");
+            priceCell.textContent = productPrice;
+            productRow.appendChild(priceCell);
+
+            document.getElementById("productTableBody").appendChild(productRow);
+        }
+
+        function validateForm() { 
+            var productName = document.getElementById("productName").value; 
+            var productPrice = document.getElementById("productPrice").value; 
+         
+            if (productName.length < 6 || productName.length > 25) { 
+                alert("Product name must be between 6 and 25 characters."); 
+                return false; 
+            } 
+ 
+            if (isNaN(productPrice) || productPrice === "") { 
+                alert("Product price must be a number."); 
+                return false; 
+            } 
+ 
+            return true; 
+        } 
+    </script>  
+</body>  
+</html>
