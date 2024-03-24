@@ -1,0 +1,56 @@
+.error { 
+    border: 1px solid red; 
+} 
+
+.success { 
+    border: 1px solid green; 
+} 
+
+table { 
+    border-collapse: collapse;
+    width: 100%; 
+} 
+
+th, 
+td { 
+    border: 1px solid #ddd; 
+    padding: 8px; 
+} 
+
+th { 
+    background-color: #f2f2f2; 
+    text-align: left; 
+} 
+
+#productTableContainer table {
+    display: none;
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+.container {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.header, .footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    margin: 0 auto; /* Menengahkan konten */
+}
