@@ -1,5 +1,5 @@
-// Table.jsx
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Table = ({ products, onDelete, onEdit, setEditId }) => {
     const [showDeleteConfirmation, setShowDeleteConfirmation] = useState(false);
@@ -19,6 +19,10 @@ const Table = ({ products, onDelete, onEdit, setEditId }) => {
         setShowDeleteConfirmation(false);
     };
 
+    const handleEditClick = (productId) => {
+        setEditId(productId); 
+    };
+
     return (
         <div>
             <h2>Product List</h2>
@@ -35,29 +39,28 @@ const Table = ({ products, onDelete, onEdit, setEditId }) => {
                 </thead>
                 <tbody>
                     {products.map((product, index) => (
-                        <tr key={product.id}>
-                            <td>{index + 1}</td>
+                        <tr key={index}>
+                            <td><Link to={`/account/${product.id}`}>{index + 1}</Link></td>
                             <td>{product.name}</td>
                             <td>{product.category}</td>
                             <td>{product.freshness}</td>
                             <td>{product.price}</td>
                             <td>
-                                <button onClick={() => handleDeleteClick(product.id)}>Delete</button>
-                                <button onClick={() => onEdit(product.id, { ...product })}>Edit</button>
-                                {/* Gunakan satu tombol delete dengan konfirmasi */}
-                                
+                                <button type="delete" className="btn btn-danger" onClick={() => handleDeleteClick(product.id)}>Delete</button>
+                                <button type="edit" className="btn btn-success" onClick={() => handleEditClick(product.id)}>Edit</button>
                             </td>
                         </tr>
                     ))}
                 </tbody>
+
+
             </table>
 
-            {/* Alert/Modal/Notification untuk konfirmasi delete */}
             {showDeleteConfirmation && (
                 <div>
                     <p>Apakah Anda yakin ingin menghapus produk ini?</p>
-                    <button onClick={confirmDelete}>Ya</button>
-                    <button onClick={cancelDelete}>Tidak</button>
+                    <button type="button" className="btn btn-danger" onClick={confirmDelete}>Ya</button>
+                    <button type="button" className="btn btn-light" onClick={cancelDelete}>Tidak</button>
                 </div>
             )}
         </div>
