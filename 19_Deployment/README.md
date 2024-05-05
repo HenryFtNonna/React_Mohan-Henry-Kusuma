@@ -1,37 +1,30 @@
-# Rangkuman React Form
+# Rangkuman Deployment Varcel
 
-## 1. Regex (Regular Expression) validasi 
-adalah teknik yang digunakan untuk memvalidasi format atau pola dari sebuah string. Ini memungkinkan Anda untuk memeriksa apakah sebuah string cocok dengan pola tertentu atau tidak. Dalam konteks ReactJS, regex validasi sering digunakan untuk memvalidasi input pengguna dalam form, seperti alamat email, nomor telepon, atau format tanggal.
+## 1. Varcel
+Vercel adalah platform cloud yang menyediakan layanan hosting untuk aplikasi web dan situs statis. Ini dirancang untuk memudahkan proses deployment dan hosting aplikasi web, terutama aplikasi yang dibangun dengan framework front-end seperti ReactJS. Vercel menawarkan berbagai fitur termasuk otomatisasi deployment, manajemen domain, analisis performa, dan banyak lagi.
 
-### a. Karakter Khusus: 
-Regex menggunakan karakter khusus seperti ^, $, [], {}, |, dan \ untuk mendefinisikan pola validasi.
+## 2. Mengapa Harus Menggunakan varcel
 
-### b. Quantifiers: 
-Quantifiers seperti *, +, ?, dan {} digunakan untuk menentukan jumlah pengulangan karakter yang diizinkan dalam pola.
+### a. Mudah digunakan: 
+Vercel menawarkan antarmuka yang sederhana dan intuitif, sehingga memudahkan pengguna untuk melakukan deployment aplikasi web dengan cepat dan mudah.
 
-### c. Character Classes: 
-Character classes seperti \d, \w, dan \s digunakan untuk mencocokkan karakter-karakter tertentu, seperti digit, huruf, atau spasi.
+### b. Otomatisasi Deployment: 
+Vercel menyediakan otomatisasi deployment yang dapat mengotomatiskan proses build dan deployment aplikasi, sehingga mengurangi waktu dan usaha yang diperlukan.
 
-### d. Metacharacters: 
-Metacharacters seperti . dan \ digunakan untuk mencocokkan karakter khusus atau karakter yang memiliki arti khusus dalam regex.
+### c. Skalabilitas: 
+Vercel memiliki infrastruktur yang kuat dan skalabel, sehingga dapat menangani lalu lintas aplikasi web dengan baik, dari penggunaan yang rendah hingga tinggi.
 
-### Kesimpulan
-Regex validasi adalah teknik yang berguna dalam memvalidasi input pengguna dalam aplikasi ReactJS. Dengan menggunakan regex validasi, Anda dapat memastikan bahwa data yang dimasukkan pengguna sesuai dengan format atau pola yang diharapkan, sehingga meningkatkan keamanan dan kualitas aplikasi Anda.
-
-## 2. React Form 
-adalah bagian penting dalam pengembangan aplikasi web yang memungkinkan pengguna untuk berinteraksi dengan situs web melalui input data, seperti teks, checkbox, atau dropdown. Form biasanya digunakan untuk mengumpulkan informasi dari pengguna, seperti pendaftaran akun, pengisian formulir kontak, atau pencarian data.
-
-### a. State Management: 
-Gunakan useState untuk mengelola state form, seperti nilai input, validasi, dan status pengiriman.
-
-### b. Event Handling: 
-Gunakan event handling untuk menangani perubahan nilai input, seperti onChange untuk input teks, onClick untuk checkbox, atau onSubmit untuk form utama.
-
-### c. Validasi Data: 
-Validasi data bisa dilakukan dengan menggunakan kondisi dan logika JavaScript, atau dengan menggunakan pustaka validasi seperti Yup atau Validator.
+### d. Integrasi dengan Framework: 
+Vercel terintegrasi dengan berbagai framework front-end, termasuk ReactJS, Next.js, dan lainnya, sehingga memudahkan penggunaan dan deployment aplikasi yang dibangun dengan framework tersebut.
 
 ### Kesimpulan
-React Form adalah bagian penting dalam pengembangan aplikasi web yang memungkinkan pengguna untuk berinteraksi dengan situs web melalui input data. Dengan menggunakan ReactJS, Anda dapat membuat form yang responsif, interaktif, dan dapat disesuaikan dengan kebutuhan aplikasi Anda. Dengan memahami konsep dan teknik pembuatan React Form, Anda dapat membuat aplikasi web yang menarik dan fungsional untuk pengguna Anda.
+Deployment Vercel adalah proses yang cepat, mudah, dan intuitif untuk mempublikasikan aplikasi web ReactJS Anda ke cloud. Dengan fitur-fitur seperti otomatisasi deployment, manajemen domain, dan analisis performa, Vercel memungkinkan pengguna untuk fokus pada pengembangan aplikasi web mereka tanpa harus khawatir tentang infrastruktur hosting. Dengan memahami langkah-langkah dan fitur-fitur Vercel, Anda dapat dengan mudah mengimplementasikan deployment ReactJS Anda dan mempublikasikan aplikasi web Anda ke publik.
+
+
+
+
+
+
 
 
 
