@@ -22,16 +22,17 @@ export default function Login() {
       setError('Email dan password harus diisi.');
       return;
     }
-
+  
     // Gunakan variabel lingkungan dari .env
-    const apiUrl = `${import.meta.env.VITE_API_URL}?search=${email}&password=${password}`;
-
+    const apiUrl = import.meta.env.VITE_API_URL;
+  
     try {
       const response = await fetch(apiUrl, {
-        method: 'GET',
+        method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
+        body: JSON.stringify({ email, password }),
       });
       const data = await response.json();
       if (!response.ok || data.length === 0) {
@@ -40,6 +41,7 @@ export default function Login() {
       localStorage.setItem('isLoggedIn', 'true');
       navigate('/dashboard');
     } catch (error) {
+      console.error(error);
       setError(error.message);
       document.getElementById('error_modal').showModal();
     }
