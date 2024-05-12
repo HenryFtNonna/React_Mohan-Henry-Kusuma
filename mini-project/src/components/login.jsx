@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import spongebobImage from './public/images/spongebob.png';
+import spongebobImage from './pages/images/spongebob.png';
 
 export default function Login() {
   const [email, setEmail] = useState('');

@@ -1,4 +1,6 @@
 import { Link } from 'react-router-dom';
+import spongebobImage from './images/spongebob.png';
+import iconImage from './images/icons.gif';
 
 
 export default function LandingPage() {
@@ -9,7 +11,7 @@ export default function LandingPage() {
                 <nav className="bg-white dark:bg-gray-900 fixed w-full z-10 top-0 left-0 border-b border-gray-200 dark:border-gray-600 backdrop-filter backdrop-blur-lg bg-opacity-75">
                     <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
                         <a href="https://www.linkedin.com/in/mohan-henry-kusuma/" className="flex items-center space-x-3 rtl:space-x-reverse">
-                            <img src="./public/images/icons.gif" className="h-15" />
+                            <img src={iconImage} className="h-15" />
                             <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
                                 DUITTT
                             </span>
@@ -34,7 +36,7 @@ export default function LandingPage() {
                 </nav>
                 <div className="hero min-h-screen bg-base-200">
                     <div className="hero-content flex-col lg:flex-row-reverse">
-                        <img src="./src/assets/images/spongebob.png" className="max-w-sm rounded-lg shadow-2xl" />
+                        <img src={spongebobImage} className="max-w-sm rounded-lg shadow-2xl" />
                         <div>
                             <h1 className="text-5xl font-bold">DUITTT 🤑🤑🤑🤑</h1>
                             <p className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>

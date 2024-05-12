@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLandmark, faCommentsDollar, faTable, faMagnifyingGlass, faAddressCard, faRightFromBracket } from '@fortawesome/free-solid-svg-icons';
 import { library } from '@fortawesome/fontawesome-svg-core';
+import spongebobImage from './images/spongebob.png';
 
 library.add(faLandmark, faCommentsDollar, faTable, faMagnifyingGlass, faAddressCard, faRightFromBracket);
 
@@ -27,7 +28,7 @@ export default function Navbar() {
             
             <div className={`side-bar ${isSidebarOpen ? 'open' : ''}`} id="sidebar">
                 <div className="user-p" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
-                    <img src="./public/images/spongebob.png" alt="Logo" />
+                    <img src={spongebobImage} alt="Logo" />
                     <h4 className="mt-2">DUITTT</h4>
                 </div>
                 <ul>
