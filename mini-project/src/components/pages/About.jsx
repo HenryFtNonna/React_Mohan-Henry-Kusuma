@@ -4,23 +4,19 @@ const About = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    // Mendapatkan nilai dari input form
     const name = document.getElementById('name').value.trim();
     const email = document.getElementById('email').value.trim();
     const message = document.getElementById('textarea').value.trim();
 
-    // Validasi form
     if (!name || !email || !message) {
       alert('Form ini harus diisi');
       return;
     }
 
-    // Kirim email ke herni@gmail.com
     const subject = `Pesan dari ${name} (${email})`;
     const body = `Pesan: ${message}`;
     const mailToLink = `mailto:herni@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
-    // Buka aplikasi email default untuk mengirim email
     window.location.href = mailToLink;
   };
 

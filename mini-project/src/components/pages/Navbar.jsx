@@ -15,11 +15,6 @@ export default function Navbar() {
         setIsSidebarOpen(false);
     };
 
-    const handleNavigation = (path) => {
-        closeSidebar();
-        navigate(path);
-    };
-
     return (
         <div>
             <div>

@@ -6,7 +6,6 @@ export default function Dashboard() {
 
     // const apiGET = `${import.meta.env.VITE_API_GET}`;
 
-    // Function to fetch data from API
     const fetchData = async () => {
         try {
             const response = await axios.get('https://660faf72356b87a55c520ca4.mockapi.io/DataTabel');
@@ -17,7 +16,6 @@ export default function Dashboard() {
         }
     };
 
-    // Fetch data when component mounts
     useEffect(() => {
         fetchData();
     }, []);

@@ -5,7 +5,6 @@ export default function Dashboard() {
     const [data, setData] = useState([]);
     const [searchKeyword, setSearchKeyword] = useState('');
 
-    // Function to fetch data from API
     const fetchData = async () => {
         try {
             const response = await axios.get('https://660faf72356b87a55c520ca4.mockapi.io/DataTabel');
@@ -16,17 +15,16 @@ export default function Dashboard() {
         }
     };
 
-    // Fetch data when component mounts
     useEffect(() => {
         fetchData();
     }, []);
 
-    // Function to handle search input change
+  
     const handleSearchChange = (e) => {
         setSearchKeyword(e.target.value);
     };
 
-    // Filter data based on search keyword
+   
     const filteredData = data.filter((item) =>
         item.tanggal.toLowerCase().includes(searchKeyword.toLowerCase()) ||
         item.jenis.toLowerCase().includes(searchKeyword.toLowerCase()) ||

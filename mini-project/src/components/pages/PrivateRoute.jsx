@@ -6,9 +6,7 @@ const PrivateRoute = ({ children }) => {
   const location = useLocation();
 
   if (!isAuthenticated) {
-    // Simpan lokasi yang ingin diakses pengguna
     localStorage.setItem('redirectAfterLogin', location.pathname);
-    // Arahkan ke halaman login
     return <Navigate to="/login" replace />;
   }
 
