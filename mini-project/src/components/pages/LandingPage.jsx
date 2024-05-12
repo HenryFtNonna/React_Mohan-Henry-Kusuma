@@ -21,7 +21,8 @@ export default function LandingPage() {
                                 type="button"
                                 className="masuk-signup text-white mr-4 bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800"
                             >
-                                Sign Up
+                                
+                                <Link to="/register">Sign Up</Link>
                             </button>
                             <button
                                 type="button"
@@ -39,7 +40,10 @@ export default function LandingPage() {
                         <img src={spongebobImage} className="max-w-sm rounded-lg shadow-2xl" />
                         <div>
                             <h1 className="text-5xl font-bold">DUITTT 🤑🤑🤑🤑</h1>
-                            <p className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+                            <p className="py-6">DUITTT adalah sebuah website yang bertujuan untuk memudahkan pengelolaan keuangan.
+                  terdapat fitur utama dari duit yaitu Dashboard untuk menampilkanapan data keuangan,
+                  Tambah Data untuk menambahkan data keuangan, Rekap untuk menampilkanapan rekapitulasi keuangan,
+                  dan Search untuk mencari data keuangan.</p>
                             <button className="masuk-login btn btn-success">
                             <Link to="/login">Login</Link>
                             </button>

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate, useLocation, Link } from 'react-router-dom';
 import spongebobImage from './pages/images/spongebob.png';
 
 export default function Login() {
@@ -65,7 +65,7 @@ export default function Login() {
                 </label>
                 <input type="password" placeholder="password" className="input input-bordered" required value={password} onChange={(e) => setPassword(e.target.value)} />
                 <label className="label">
-                  <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
+                  <a href="#" className="label-text-alt link link-hover"><Link to="/register">belum mempunyai akun?</Link></a>
                 </label>
               </div>
               {error && <p className="text-error">{error}</p>}
@@ -77,7 +77,6 @@ export default function Login() {
         </div>
       </div>
       {warning && <div className="alert alert-warning">{warning}</div>}
-      {/* Modal untuk menampilkan pesan kesalahan */}
       <dialog id="error_modal" className="modal">
         <div className="modal-box">
           <h3 className="font-bold text-lg">Kesalahan!</h3>

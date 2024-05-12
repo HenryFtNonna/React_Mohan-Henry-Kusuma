@@ -20,24 +20,22 @@ const Table = () => {
     const [deleteIndex, setDeleteIndex] = useState(null);
 
 
+    const fetchData = async () => {
+        try {
+            const response = await axios.get('https://660faf72356b87a55c520ca4.mockapi.io/DataTabel'); 
+            const fetchedData = response.data;
+            setData(fetchedData);
+        } catch (error) {
+            console.error('Error fetching data:', error);
+        }
+    };
 
-    // Function to fetch data from API
-const fetchData = async () => {
-    try {
-        const response = await axios.get('https://660faf72356b87a55c520ca4.mockapi.io/DataTabel'); // Perbaiki disini
-        const fetchedData = response.data;
-        setData(fetchedData);
-    } catch (error) {
-        console.error('Error fetching data:', error);
-    }
-};
-
-    // Function to handle form data change
+    
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
-    // Function to add or edit data
+
     const handleAddData = async () => {
         try {
             // Validasi form
@@ -71,7 +69,7 @@ const fetchData = async () => {
     };
     
 
-    // Function to handle edit
+    
     const handleEdit = (index) => {
         const selectedData = data[index];
         setFormData({ ...selectedData });
@@ -79,33 +77,28 @@ const fetchData = async () => {
         document.getElementById('my_modal_2').showModal();
     };
 
-    // Function to handle delete
-// Function to handle delete// Function to handle delete
+
 const handleDelete = (index) => {
     const selectedData = data[index];
     setDeleteIndex(index);
-    // Simpan ID data yang akan dihapus dalam state formData
     setFormData({ ...formData, id: selectedData.id });
     document.getElementById('delete_modal').showModal();
 };
 
-// Function to confirm delete
+
 const confirmDelete = async () => {
     try {
-        // Gunakan formData.id untuk menghapus data
         await axios.delete(`https://660faf72356b87a55c520ca4.mockapi.io/DataTabel/${formData.id}`);
         const newData = [...data];
         newData.splice(deleteIndex, 1);
         setData(newData);
         setDeleteIndex(null);
-        // Reset formData.id setelah penghapusan berhasil
         setFormData({ ...formData, id: null });
         document.getElementById('delete_modal').close();
     } catch (error) {
         console.error('Error deleting data:', error);
     }
 };
-    // Fetch data when component mounts
     useEffect(() => {
         fetchData();
     }, []);
@@ -189,17 +182,17 @@ const confirmDelete = async () => {
                     </div>
                 </dialog>
                 <dialog id="delete_modal" className="modal">
-    <div className="modal-box w-11/12 max-w-5xl">
-        <h3 className="font-bold text-lg">Konfirmasi Hapus</h3>
-        <div className="modal-content">
-            <p>Apakah Anda yakin ingin menghapus data?</p>
-            <div className="modal-action">
-                <button className="btn" onClick={() => confirmDelete()}>Ya</button>
-                <button className="btn" onClick={() => document.getElementById('delete_modal').close()}>Tidak</button>
-            </div>
-        </div>
-    </div>
-</dialog>
+                    <div className="modal-box w-11/12 max-w-5xl">
+                        <h3 className="font-bold text-lg">Konfirmasi Hapus</h3>
+                        <div className="modal-content">
+                            <p>Apakah Anda yakin ingin menghapus data?</p>
+                            <div className="modal-action">
+                                <button className="btn" onClick={() => confirmDelete()}>Ya</button>
+                                <button className="btn" onClick={() => document.getElementById('delete_modal').close()}>Tidak</button>
+                            </div>
+                        </div>
+                    </div>
+                </dialog>
             </div>
         </div>
     );

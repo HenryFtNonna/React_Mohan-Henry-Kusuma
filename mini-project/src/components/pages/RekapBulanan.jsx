@@ -9,7 +9,6 @@ export default function RekapBulanan() {
     const [totalPengeluaran, setTotalPengeluaran] = useState(0);
     const [totalJumlah, setTotalJumlah] = useState(0);
 
-    // Function to fetch data from API
     const fetchData = async () => {
         try {
             const response = await axios.get('https://660faf72356b87a55c520ca4.mockapi.io/DataTabel');
@@ -20,7 +19,6 @@ export default function RekapBulanan() {
         }
     };
 
-    // Function to calculate totals
     const calculateTotals = () => {
         let pemasukan = 0;
         let pengeluaran = 0;
@@ -38,7 +36,6 @@ export default function RekapBulanan() {
         setTotalJumlah(pemasukan - pengeluaran);
     };
 
-    // Fetch data and calculate totals when component mounts
     useEffect(() => {
         fetchData();
     }, []);
