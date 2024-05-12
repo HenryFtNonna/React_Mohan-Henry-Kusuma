@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
+import spongebobImage from './public/images/spongebob.png';
 
 export default function Login() {
   const [email, setEmail] = useState('');
@@ -49,7 +50,7 @@ export default function Login() {
     <div>
       <div className="hero min-h-screen bg-base-200">
         <div className="hero-content flex-col lg:flex-row-reverse">
-          <img src="./public/images/spongebob.png" className="max-w-sm rounded-lg shadow-2xl" style={{ marginLeft: '50px' }} />
+          <img src={spongebobImage} className="max-w-sm rounded-lg shadow-2xl" style={{ marginLeft: '50px' }} />
           <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100" style={{ marginRight: '50px' }}>
             <form className="card-body" onSubmit={handleLogin}>
               <div className="form-control">
