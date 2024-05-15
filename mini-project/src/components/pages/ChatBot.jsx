@@ -29,7 +29,7 @@ export default function ChatBot() {
         };
 
         try {
-            const response = await fetch('https://api.openai.com/v1/chat/completions', {
+            const response = await fetch(import.meta.env.VITE_APP_OPENAI_API_URL, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
