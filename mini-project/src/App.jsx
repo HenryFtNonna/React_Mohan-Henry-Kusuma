@@ -11,6 +11,7 @@ import RekapBulanan from "./components/pages/RekapBulanan"
 import PrivateRoute from './components/pages/PrivateRoute';
 import Search from "./components/pages/Search";
 import About from "./components/pages/About";
+import ChatBot from './components/pages/ChatBot';
 
 function App() {
   const isAuthenticated = !!localStorage.getItem('isLoggedIn');
@@ -24,6 +25,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/logout" element={<Logout />} />
+          <Route path="/chat-bot" element={<PrivateRoute isAuthenticated={isAuthenticated}><ChatBot /></PrivateRoute>} />
           <Route path="/about" element={<PrivateRoute isAuthenticated={isAuthenticated}><About /></PrivateRoute>} />
           <Route path="/search" element={<PrivateRoute isAuthenticated={isAuthenticated}><Search /></PrivateRoute>} />
           <Route path="/table" element={<PrivateRoute isAuthenticated={isAuthenticated}><Table /></PrivateRoute>} />

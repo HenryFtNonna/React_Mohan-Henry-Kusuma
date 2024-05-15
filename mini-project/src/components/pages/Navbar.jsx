@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLandmark, faCommentsDollar, faTable, faMagnifyingGlass, faAddressCard, faRightFromBracket } from '@fortawesome/free-solid-svg-icons';
+import { faLandmark, faCommentsDollar, faTable, faMagnifyingGlass, faAddressCard, faRightFromBracket, faCommentDots } from '@fortawesome/free-solid-svg-icons';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import spongebobImage from './images/spongebob.png';
 
-library.add(faLandmark, faCommentsDollar, faTable, faMagnifyingGlass, faAddressCard, faRightFromBracket);
+library.add(faLandmark, faCommentsDollar, faTable, faMagnifyingGlass, faAddressCard, faRightFromBracket, faCommentDots);
 
 export default function Navbar() {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -49,6 +49,12 @@ export default function Navbar() {
                         <Link to="/search">
                             <FontAwesomeIcon icon={faMagnifyingGlass} />
                             <span className="ml-3">Search</span>
+                        </Link>
+                    </li>
+                    <li onClick={closeSidebar}>
+                        <Link to="/chat-bot">
+                            <FontAwesomeIcon icon={faCommentDots} />
+                            <span className="ml-3">Chat Bot</span>
                         </Link>
                     </li>
                     <li onClick={closeSidebar}>
