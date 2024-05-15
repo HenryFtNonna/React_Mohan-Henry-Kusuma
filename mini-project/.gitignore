@@ -10,12 +10,11 @@ lerna-debug.log*
 # Dependencies
 node_modules
 
-# Production
+
 dist
 dist-ssr
-
-# Misc
 *.local
+.env
 
 # Editor directories and files
 .vscode/*
@@ -28,8 +27,3 @@ dist-ssr
 *.sln
 *.sw?
 
-.env
-.env.development.local
-.env.test.local
-.env.production.local
-.env.local
