@@ -6,7 +6,10 @@ export default function ChatBot() {
     const [messages, setMessages] = useState([]);
     const [input, setInput] = useState('');
     const [isLoading, setIsLoading] = useState(false);
+
     const API_KEY = import.meta.env.VITE_OPENAI_API_KEY;
+    const API_URL = import.meta.env.VITE_APP_OPENAI_API_URL;
+
 
     const handleInputChange = (e) => {
         setInput(e.target.value);
@@ -29,7 +32,7 @@ export default function ChatBot() {
         };
 
         try {
-            const response = await fetch(import.meta.env.VITE_APP_OPENAI_API_URL, {
+            const response = await fetch(API_URL, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
