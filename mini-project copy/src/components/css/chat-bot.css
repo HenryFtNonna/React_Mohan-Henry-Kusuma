@@ -1,0 +1,12 @@
+.chat-container {
+    max-width: 800px; /* Atur lebar maksimum untuk container chat */
+    margin: auto; /* Pusatkan container chat */
+  }
+
+  .input-chat {
+    height: 40px; /* Atur tinggi input chat */
+  }
+
+  .chat-bubble {
+    max-width: 80%; /* Atur lebar maksimum untuk bubble chat */
+  }
