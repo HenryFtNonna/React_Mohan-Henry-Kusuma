@@ -12,7 +12,7 @@ export default function LandingPage() {
                     <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
                         <a href="https://www.linkedin.com/in/mohan-henry-kusuma/" className="flex items-center space-x-3 rtl:space-x-reverse">
                             <img src={iconImage} className="h-15" />
-                            <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
+                            <span className="font-judul self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
                                 DUITTT
                             </span>
                         </a>
@@ -39,8 +39,8 @@ export default function LandingPage() {
                     <div className="hero-content flex-col lg:flex-row-reverse">
                         <img src={spongebobImage} className="max-w-sm rounded-lg shadow-2xl" />
                         <div>
-                            <h1 className="text-5xl font-bold">DUITTT 🤑🤑🤑🤑</h1>
-                            <p className="py-6">DUITTT adalah sebuah website yang bertujuan untuk memudahkan pengelolaan keuangan.
+                            <h1 className="text-7xl font-judul">DUITTT </h1>
+                            <p className="py-6 font-mono">DUITTT adalah sebuah website yang bertujuan untuk memudahkan pengelolaan keuangan.
                   terdapat fitur utama dari duit yaitu Dashboard untuk menampilkanapan data keuangan,
                   Tambah Data untuk menambahkan data keuangan, Rekap untuk menampilkanapan rekapitulasi keuangan,
                   dan Search untuk mencari data keuangan.</p>
@@ -52,7 +52,7 @@ export default function LandingPage() {
                 </div>
             </div>
 
-        
+// 🤑🤑🤑🤑
     
     )
   }

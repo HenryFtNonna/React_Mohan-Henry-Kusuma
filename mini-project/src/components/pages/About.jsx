@@ -34,7 +34,7 @@ const About = () => {
           <div className="flex items-stretch justify-center">
             <div className="grid md:grid-cols-2">
               <div className="h-full pr-6">
-                <p className="mt-3 mb-12 text-lg text-gray-600 dark:text-slate-400">
+                <p className="mt-3 mb-12 text-lg text-gray-600 dark:text-slate-400 font-mono">
                   DUITTT adalah sebuah website yang bertujuan untuk memudahkan pengelolaan keuangan.
                   terdapat fitur utama dari duit yaitu Dashboard untuk menampilkanapan data keuangan,
                   Tambah Data untuk menambahkan data keuangan, Rekap untuk menampilkanapan rekapitulasi keuangan,
@@ -63,10 +63,10 @@ const About = () => {
                       <h3 className="mb-2 text-lg font-medium leading-6 text-gray-900 dark:text-white">
                         Tugu Jogja
                       </h3>
-                      <p className="text-gray-600 dark:text-slate-400">
+                      <p className="text-gray-600 dark:text-slate-400 font-mono">
                         Jend. Sudirman, Gowongan, Kec. Jetis, Kota Yogyakarta, Daerah Istimewa Yogyakarta
                       </p>
-                      <p className="text-gray-600 dark:text-slate-400">
+                      <p className="text-gray-600 dark:text-slate-400 font-mono">
                         Yogyakarta 55233
                       </p>
                     </div>
@@ -91,13 +91,13 @@ const About = () => {
                       </svg>
                     </div>
                     <div className="ml-4 mb-4">
-                      <h3 className="mb-2 text-lg font-medium leading-6 text-gray-900 dark:text-white">
+                      <h3 className="mb-2 text-lg font-medium leading-6 text-gray-900 dark:text-white font-mono">
                         Kontak
                       </h3>
-                      <p className="text-gray-600 dark:text-slate-400">
+                      <p className="text-gray-600 dark:text-slate-400 font-mono">
                         Mobile: 08999 9999 999
                       </p>
-                      <p className="text-gray-600 dark:text-slate-400">
+                      <p className="text-gray-600 dark:text-slate-400 font-mono">
                         Mail: henriigateng@gmail.com
                       </p>
                     </div>
@@ -121,13 +121,13 @@ const About = () => {
                       </svg>
                     </div>
                     <div className="ml-4 mb-4">
-                      <h3 className="mb-2 text-lg font-medium leading-6 text-gray-900 dark:text-white">
+                      <h3 className="mb-2 text-lg font-medium leading-6 text-gray-900 dark:text-white font-mono">
                         Jam Kerja
                       </h3>
-                      <p className="text-gray-600 dark:text-slate-400">
+                      <p className="text-gray-600 dark:text-slate-400 font-mono">
                         Senin - Jumat: 08:00 - 17:00
                       </p>
-                      <p className="text-gray-600 dark:text-slate-400">
+                      <p className="text-gray-600 dark:text-slate-400 font-mono">
                         Sabtu &amp; Minggu: 08:00 - 12:00
                       </p>
                     </div>

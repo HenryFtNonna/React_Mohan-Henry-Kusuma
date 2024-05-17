@@ -105,7 +105,7 @@ const confirmDelete = async () => {
 
     return (
         <div className="container mx-auto p-6">
-            <h1 className="text-3xl font-bold mb-6 ml-6">Tambah Data</h1>
+            <h1 className="text-3xl font-judul text-center mb-6 ml-6">Tambah Data</h1>
             <div className="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-lg">
                 <div className="overflow-x-auto">
                     <table className="table-auto min-w-full divide-y divide-gray-200">

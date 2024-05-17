@@ -59,7 +59,7 @@ export default function ChatBot() {
         <div className="p-6 bg-base-200 min-h-screen flex flex-col justify-between chat-container">
             <div className="user-p flex items-center justify-center mb-4">
                 <img src={chatbotAvatar} alt="logo" className="w-2 h-13 mr-2" />
-                <h1 className="text-xl font-bold">DUITTT BOT</h1>
+                <h1 className="text-4xl font-judul">DUITTT BOT</h1>
             </div>
             <div className="flex-1 overflow-auto mb-4">
                 {messages.map((msg, index) => (
@@ -72,14 +72,14 @@ export default function ChatBot() {
                                 />
                             </div>
                         </div>
-                        <div className="chat-header">
+                        <div className="chat-header font-judul">
                             {msg.user}
                             <time className="text-xs opacity-50 ml-2">{msg.time}</time>
                         </div>
-                        <div className="chat-bubble">{msg.text}</div>
+                        <div className="chat-bubble font-mono">{msg.text}</div>
                     </div>
                 ))}
-                {isLoading && <div className="text-center">Bot is typing...</div>}
+                {isLoading && <div className="text-center font-mono">Bot is typing...</div>}
             </div>
             <form className="flex" onSubmit={handleSubmit}>
                 <input

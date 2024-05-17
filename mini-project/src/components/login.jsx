@@ -54,6 +54,7 @@ export default function Login() {
           <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100" style={{ marginRight: '50px' }}>
             <form className="card-body" onSubmit={handleLogin}>
               <div className="form-control">
+                <h1 className='font-judul text-5xl flex items-center justify-center'>login</h1> <br />
                 <label className="label">
                   <span className="label-text">Email</span>
                 </label>

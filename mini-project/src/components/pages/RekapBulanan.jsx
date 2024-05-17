@@ -47,7 +47,7 @@ export default function RekapBulanan() {
     return (
         <div>
             <div className="container mx-auto p-6">
-                <h1 className="text-3xl font-bold mb-6 ml-6">Rekap Bulanan</h1>
+                <h1 className="text-3xl font-judul text-center mb-6 ml-6">Rekap Bulanan</h1>
                 <div className="stats mb-5">
                     <div className="stat text-green-600">
                         <div className="stat-title">Pemasukan</div>

@@ -34,9 +34,13 @@ export default function Dashboard() {
 
     return (
         <div>
+            
             <div className="hero min-h-screen bg-base-200">
+            
                 <div className="hero-content text-center">
+                    
                     <div className="overflow-x-auto">
+                    <h1 className='font-judul text-4xl flex items-center justify-center'>Search</h1> 
                         <input
                             type="text"
                             placeholder="Search..."

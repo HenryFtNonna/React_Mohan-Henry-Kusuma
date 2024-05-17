@@ -24,7 +24,7 @@ export default function Navbar() {
             <div className={`side-bar ${isSidebarOpen ? 'open' : ''}`} id="sidebar">
                 <div className="user-p" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
                     <img src={spongebobImage} alt="Logo" />
-                    <h4 className="mt-2">DUITTT</h4>
+                    <h4 className="mt-2 font-judul">DUITTT</h4>
                 </div>
                 <ul>
                     <li onClick={closeSidebar}>
